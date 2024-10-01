@@ -3,9 +3,8 @@ on:
   push:
     branches:
       - master
-    paths-ignore:
-        - '.github/workflows/continue-flow.yml'
-        - '**/execution-flow.yml'  # .github/workflows/execution-flow.yml
+    paths:
+        - '**/matrix-flow.yml'
 jobs: 
   build:
     #continue-on-error: true
