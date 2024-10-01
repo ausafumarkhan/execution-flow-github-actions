@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+        - .github/workflows/continue-flow.yaml
+        - "**/execution-flow.yml"   # .github/workflows/execution-flow.yml
 jobs: 
   build:
     strategy:
@@ -12,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions@checkout@v4
+        uses: actions/checkout@v4
       - name: Install node JS
-        uses: actions@setup-node@v4
+        uses: actions/setup-node@v4
         with:
           node-version: latest
       - name: Install Dependencies
