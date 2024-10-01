@@ -1,7 +1,7 @@
 name: Continue with error-Website Deployment
 on:
   push:
-    branches:
+    branches-ignore:
       - master
 jobs:
   lint:
