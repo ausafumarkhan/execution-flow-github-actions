@@ -4,8 +4,8 @@ on:
     branches:
       - master
     paths-ignore:
-        - .github/workflows/continue-flow.yaml
-        - "**/execution-flow.yml"   # .github/workflows/execution-flow.yml
+        - '.github/workflows/continue-flow.yaml'
+        - '.github/workflows/execution-flow.yml'  # .github/workflows/execution-flow.yml
 jobs: 
   build:
     strategy:
