@@ -1,8 +1,10 @@
 name: Website Deployment
 on:
   push:
-    branches-ignore:
+    branches:
       - master
+    paths:
+      - '**/execution-flow.yml'
 jobs:
   lint:
     runs-on: ubuntu-latest
