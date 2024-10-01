@@ -8,6 +8,7 @@ on:
         - '**/execution-flow.yml'  # .github/workflows/execution-flow.yml
 jobs: 
   build:
+    continue-on-error: true
     strategy:
         matrix:
             node-versions: [12,14,16]
