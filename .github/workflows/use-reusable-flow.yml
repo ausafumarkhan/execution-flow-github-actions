@@ -71,8 +71,14 @@ jobs:
     uses: ./.github/workflows/reusable-flow.yml
     with:
       artifact-name: dist-files
-    # secrets:
-    #   some-secret: ${{ secrets.some-secret }}
+  print-deploy-information:
+    needs: deploy
+    runs-on: ubunty-latest
+    steps:
+      - name: Print deploy output
+        run: echo "${{ needs.deploy.outputs.result }}"  # outputs.result gets value from reusable workflow
+  # secrets:
+  #   some-secret:${ secrets.some-secret }
   report:
     needs: [lint, deploy]
     if: failure()
