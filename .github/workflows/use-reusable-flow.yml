@@ -73,7 +73,7 @@ jobs:
       artifact-name: dist-files
   print-deploy-information:
     needs: deploy
-    runs-on: ubunty-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Print deploy output
         run: echo "${{ needs.deploy.outputs.result }}"  # outputs.result gets value from reusable workflow
