@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - '**/use-reusable-flow.yml'
 jobs:
   lint:
     runs-on: ubuntu-latest
