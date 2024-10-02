@@ -1,10 +1,10 @@
-name: Website Deployment
+name: Using Reusable Workflow
 on:
   push:
     branches:
       - master
     paths:
-      - '**/execution-flow.yml'
+      - '**/use-reusable-flow.yml'
 jobs:
   lint:
     runs-on: ubuntu-latest
